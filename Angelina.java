@@ -101,7 +101,7 @@ public final class Angelina {
         // put your code here, use System.exit(0) to stop after printing!
 
         // Clear any labels
-        this.graph.clearLabels();
+        graph.clearLabels();
 
         // Create the main queue of vertices.
         Queue<Vertex<String>> queue = new LinkedList<Vertex<String>>();
