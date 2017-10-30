@@ -1,3 +1,6 @@
+// Will Tobey
+// wtobey1@jhu.edu
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Queue;
@@ -98,7 +101,7 @@ public final class Angelina {
         // put your code here, use System.exit(0) to stop after printing!
 
         // Clear any labels
-        graph.clearLabels();
+        this.graph.clearLabels();
 
         // Create the main queue of vertices.
         Queue<Vertex<String>> queue = new LinkedList<Vertex<String>>();
@@ -110,10 +113,10 @@ public final class Angelina {
 
             // Check if the queue is empty.
             if (queue.size() == 0) {
-                System.exit(0); 
+                System.exit(0);
             }
 
-            // Get the next vertex from teh queue.
+            // Get the next vertex from rhw queue.
             Vertex<String> currentVertex = queue.remove();
 
             // If we found the actor.
@@ -136,9 +139,7 @@ public final class Angelina {
 
                 System.exit(0);
 
-            }
-
-            else {
+            } else {
 
                 // Loop through all outgoing edges of the vertex
                 for (Edge<String> edge : graph.outgoing(currentVertex)) {
@@ -150,9 +151,7 @@ public final class Angelina {
                     // If it has, dont add it to the queue.
                     if (graph.label(nextVertex) != null) {
                         continue;
-                    }
-
-                    else {
+                    } else {
 
                         // Label it so that we know the parent vertex,
                         // and so it is not checked again.
