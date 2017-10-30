@@ -55,14 +55,14 @@ public class SparseGraph<V, E> implements Graph<V, E> {
         @Override
         public T get() {
 
-            return data;
+            return this.data;
 
         }
 
         @Override
         public void put(T t) {
 
-            data = t;
+            this.data = t;
 
         }
 
@@ -118,14 +118,14 @@ public class SparseGraph<V, E> implements Graph<V, E> {
         @Override
         public T get() {
 
-            return data;
+            return this.data;
 
         }
 
         @Override
         public void put(T t) {
 
-            data = t;
+            this.data = t;
 
         }
 
@@ -136,7 +136,7 @@ public class SparseGraph<V, E> implements Graph<V, E> {
         */
         public String toString() {
 
-            return "\"" + data + "\"";
+            return "\"" + this.data + "\"";
 
         }
 
@@ -160,7 +160,7 @@ public class SparseGraph<V, E> implements Graph<V, E> {
 
     SparseGraph() {
 
-        tag = SparseGraph.indexedTag;
+        this.tag = SparseGraph.indexedTag;
 
         SparseGraph.indexedTag++;
 
@@ -474,28 +474,6 @@ public class SparseGraph<V, E> implements Graph<V, E> {
         for (SparseVertex<V> vertex : this.vertices) {
             vertex.label = null;
         }
-
-    }
-
-    public static void main(String[] args) {
-        
-        SparseGraph<Integer, Integer> graph1 = new SparseGraph<Integer, Integer>();
-
-        Vertex<Integer> v1 = graph1.insert(1);
-        Vertex<Integer> v2 = graph1.insert(2);
-
-        Edge<Integer> e12 = graph1.insert(v1, v2, 12);
-
-        Vertex<Integer> v3 = graph1.insert(3);
-        Vertex<Integer> v4 = graph1.insert(4);
-
-        Edge<Integer> e34 = graph1.insert(v3, v4, 34);
-
-        Edge<Integer> e23 = graph1.insert(v2, v3, 23);
-
-        Edge<Integer> e14 = graph1.insert(v1, v4, 14);
-
-        System.out.println(graph1);
 
     }
 
