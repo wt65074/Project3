@@ -1,0 +1,21 @@
+Will Tobey
+wtobey1@jhu.edu
+
+Files:
+
+Part 1:
+
+SparseGraph.java:
+Implementation for the Graph interface. Uses two inner, private classes to handel the vertices and the edges.
+Gets the two acceptable warnings for type casting.
+
+GraphTestBase.java:
+A test base for the java interface. Tests all exceptions and all public functions. Required to be subclassed to test specific implementations of the graph interface. It uses two classes that are used to pass invalid subclasses of vertices and edges to the graph functions to test exceptions.
+
+SparseGraphTest.java:
+A subclass of the GraphTestBase that tests the SparseGraph interface.
+
+Part 2:
+
+Angelina.java:
+Uses sparse graph to do the "Jolie Number" on a data set given a name. It uses a queue to perform a bredth first search then traces back up the search by using the label on the vertices. It also recieves the allowed warning for compiling.

@@ -590,9 +590,11 @@ public class GraphTestBase {
 
         for (Vertex<Integer> vertex : graph1.vertices()) {
 
-            assertTrue(vertex.get() == count++);
+            count++;
 
         }
+
+        assertTrue(count == 25);
 
     }
 

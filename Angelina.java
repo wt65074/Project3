@@ -124,18 +124,18 @@ public final class Angelina {
 
                 Vertex<String> vertex = currentVertex;
 
-                // Print the vertex.
-                System.out.println(vertex.get());
-
-                do {
-
-                    // Get the vertex's parent vertex.
-                    vertex = (Vertex<String>) graph.label(vertex);
+                while (vertex != jolie) {
 
                     // Print the vertex.
                     System.out.println(vertex.get());
 
-                } while (vertex != jolie);
+
+                    // Get the vertex's parent vertex.
+                    vertex = (Vertex<String>) graph.label(vertex);
+
+                }
+
+                System.out.println(jolie.get());
 
                 System.exit(0);
 
